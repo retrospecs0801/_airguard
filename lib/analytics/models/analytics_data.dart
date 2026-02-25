@@ -104,6 +104,16 @@ class MockAnalyticsData {
         dayName: 'Fri',
         isToday: true,
       ),
+      DailyExposure(
+        date: friday.subtract(const Duration(days: 2)),
+        score: 00,
+        dayName: 'sat',
+      ),
+      DailyExposure(
+        date: friday.subtract(const Duration(days: 1)),
+        score:00 ,
+        dayName: 'sun',
+      ),
       // Future days (no data)
     ];
 

@@ -1,7 +1,7 @@
 // lib/main.dart
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; // Add this import
+import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart';
 
 import 'services/location_service.dart';
@@ -12,6 +12,8 @@ import 'services/pollution_service.dart';
 import 'recovery/recovery_module.dart';
 import 'analytics/analytics_module.dart';
 import 'community/community_screen.dart';
+
+import 'health_profile_screen.dart';
 
 void main() {
   runApp(const ExposureApp());
@@ -161,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     });
   }
 
-  // NEW: Handle keyboard input for testing
+  //  Handle keyboard input for testing
   void _handleKeyPress(KeyEvent event) {
     if (event is KeyDownEvent) {
       double? newDose;
@@ -326,14 +328,37 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 child: Column(
                   children: [
                     // Header
+                    // Header with nav button
                     const SizedBox(height: 20),
-                    const Text(
-                      'Pollution Exposure',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const HealthProfileScreen()),
+                            );
+                          },
+                          icon: const Icon(Icons.person, color: Colors.white, size: 28),
+                          style: IconButton.styleFrom(
+                            backgroundColor: Colors.white.withOpacity(0.2),
+                            padding: const EdgeInsets.all(12),
+                          ),
+                        ),
+                        const Expanded(
+                          child: Center(
+                            child: Text(
+                              'Pollution Exposure',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 52), // Balance the layout
+                      ],
                     ),
                     const SizedBox(height: 30),
 
