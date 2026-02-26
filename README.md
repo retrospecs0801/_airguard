@@ -16,7 +16,7 @@ This app helps users understand how much polluted air they personally breathe ev
 At the end of the day, the app also generates a personalized recovery plan (breathing + diet suggestions) using the Gemini API.
 
 ---
-# link for testing  https://beamish-dango-7939f4.netlify.app/
+# link for testing  [https://jocular-taffy-92e528.netlify.app/]
 ## 📚Table of Contents  
 - [Features](#features)
 - [Tech Stack & Dependencies](#tech-stack--dependencies)  
@@ -33,19 +33,16 @@ At the end of the day, the app also generates a personalized recovery plan (brea
 - Fetches live AQI from WAQI API  
 - Shows current AQI and PM2.5 around the user  
 
-
 ### *2. Score factor*
 - User sets home location  
 - Geofence detects when user leaves/enters home
 
-Dynamic Score Formula
+#### Dynamic Score Formula <br>
 dartfinalExposureScore = baseScore * vulnerabilityMultiplier * protectionFactor <br>
-where:
+where: <br>
 baseScore = time_outside * AQI <br>
 vulnerabilityMultiplier = 1.0 + (sum of negative factors) <br>
 protectionFactor = 1.0 - (sum of positive factors) <br>
-
-
 
 ### *3. Daily Exposure Summary*
 Displays:  
@@ -53,16 +50,29 @@ Displays:
 2. Average AQI  
 3. Total exposure score  
 
-
-
 ### *4. Auto generated recovery plan*
  1. Score 0–100 → Low (Simple breathing exercises (2–3 guided breathing rounds))<br>
  2. Score 101–250 → Moderate (Recovery: Hydration + light movement (1 hydration action + 2 light movements / stretches))<br>
  3. Score 251–400 → High (Mask + avoid exposure + diet + breathing (mask reminder, 2 dietary tips, 1 breathing + light indoor activity))<br>
  4. Score 400 → Critical (Doctor recommendation + immediate actions (call-to-action, emergency tips, reduce exposure now))<br>
+ 
+### *4. Health Profile & Risk Personalization*
+1. Users can declare asthma or other respiratory conditions.
+2. Risk thresholds adjust based on individual vulnerability.
+3. Alerts are personalized to exposure level and health status.
+4. Provides tailored precautions and safer route suggestions.
 
+### *5. Low-Pollution Route Optimization Map*
+1. Interactive map with air quality heat zones across the city.
+2. Shows both the normal route and a cleaner alternative.
+3. Highlights the healthier path with a message like “40% less pollution exposure.
+
+### *6. Future Exposure Simulation*
+1. Exposure Prediction: Forecasts your upcoming pollution exposure based on recent trends and current lifestyle patterns.
+2. Smart Simulation Mode: Lets you simulate how following recommended actions can reduce future exposure.
+3. Visual Projection Graphs: Extends weekly and monthly analytics with predicted values shown distinctly for clarity.
+4. Actionable Health Insights: Quantifies potential reduction (e.g., “Reduce exposure by 32%”) to encourage preventive decisions.
 ---
-
 ## 💻Tech Stack & Dependencies 
 
 ### Tech Stack
@@ -86,7 +96,7 @@ Create a New Flutter Project<br>
 and
 ### *1. Clone the repository*
 bash
-git clone [https://github.com/retrospecs0801/air_guard](https://github.com/retrospecs0801/yusufhabibyh4_AirGuard)
+git clone [https://github.com/retrospecs0801/yusufhabibyh4_AirGuard]
 
 cd air_guard
 
