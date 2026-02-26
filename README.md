@@ -1,4 +1,14 @@
-# 🌍AirGuard  
+# 🚀 Project README
+### Team Name- yusufhabibyh4
+#### Project Name- AirGuard
+#### Problem Statement (P)- Lack of real-time, personalized awareness of individual pollution exposure inhighly polluted urban environments
+#### Track- Open innovation ("build for bharat")
+#### Team Members
+Yusuf Habib – Backend Developer <br>
+Anushka Srivastava – Research & Strategy Lead <br>
+Saumya Verma – Frontend & Designing <br>
+Mohd Adnan Khan – Testing & QA Lead <br>
+## 🌍AirGuard  
 *Real-Time Air Quality Monitoring & Alert System*
 Even in the same city, people experience different pollution exposure. Someone who spends more time outdoors breathes far more polluted air than someone mostly indoors. <br>
 *AirGuard tracks every outdoor session using geofencing and combines duration × live AQI to calculate each user’s personal exposure score.*<br>
@@ -12,7 +22,7 @@ At the end of the day, the app also generates a personalized recovery plan (brea
 - [Tech Stack & Dependencies](#tech-stack--dependencies)  
 - [Installation & Setup](#installation--setup)  
 - [How the App Works](#how-the-app-works)  
-- [Directory Structure](#directory-structure)
+- [Directory Structure](#Directory-Structure)
 
 ---
 
@@ -24,14 +34,16 @@ At the end of the day, the app also generates a personalized recovery plan (brea
 - Shows current AQI and PM2.5 around the user  
 
 
-
-### *2. Outdoor Exposure Timer*
+### *2. Score factor*
 - User sets home location  
-- Geofence detects when user leaves/enters home  
+- Geofence detects when user leaves/enters home
 
-
-Exposure = Time Outside × AQI
-
+Dynamic Score Formula
+dartfinalExposureScore = baseScore * vulnerabilityMultiplier * protectionFactor <br>
+where:
+baseScore = time_outside * AQI <br>
+vulnerabilityMultiplier = 1.0 + (sum of negative factors) <br>
+protectionFactor = 1.0 - (sum of positive factors) <br>
 
 
 
@@ -74,7 +86,7 @@ Create a New Flutter Project<br>
 and
 ### *1. Clone the repository*
 bash
-git clone https://github.com/retrospecs0801/air_guard
+git clone [https://github.com/retrospecs0801/air_guard](https://github.com/retrospecs0801/yusufhabibyh4_AirGuard)
 
 cd air_guard
 
@@ -109,7 +121,7 @@ flutter run
 ---
 
 
-## 📁 Project Structure
+## 📁 Directory Structure
 ```
 pollution-exposure-app/
 ├── lib/
